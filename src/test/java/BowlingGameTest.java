@@ -49,5 +49,44 @@ public class BowlingGameTest {
         game.roll(5);
         game.roll(5);
     }
+    @Test
+    public void rollingASpareThanOneScoresThreeHundred() throws Exception
+    {
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        game.roll(10);
+        assertEquals(300,game.score());
+        System.out.println(game.score());
+    }
+    @Test
+    public void rollingASpareThanOneScoresNinty() throws Exception
+    {
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        game.roll(9);
+        assertEquals(108,game.score());
+        System.out.println(game.score());
+    }
+
+
+
 
 }
